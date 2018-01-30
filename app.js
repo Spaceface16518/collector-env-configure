@@ -1,6 +1,6 @@
-const argsv = require('yargs').parse()
+require('yargs').parse()
   .command('credentials <USER> <PASS> <CLIENT_ID> <CLIENT_SECRET>', 'Enter your Reddit bot credentials', (argsv) => {
-    argsv.positional('USER', {
+    yargs.positional('USER', {
     describe: 'Reddit username',
     type: 'string',
     default: 'Spaceface16518'
