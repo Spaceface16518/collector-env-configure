@@ -1,0 +1,19 @@
+{
+  "name": "collector-env-configure",
+  "version": "1.0.0",
+  "description": "A cli argument collector for Halo Strat Roulette's Reddit Bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spaceface16518/collector-env-configure.git"
+  },
+  "author": "Spaceface16518",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Spaceface16518/collector-env-configure/issues"
+  },
+  "homepage": "https://github.com/Spaceface16518/collector-env-configure#readme",
+}
