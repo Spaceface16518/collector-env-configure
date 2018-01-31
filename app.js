@@ -36,6 +36,8 @@ require('yargs')
   .help()
   .argv
 
+// NOTE: For now just log these variables to console.
+// IDEA: return an object with these variables. Maybe JSON.
 console.log(username);
 console.log(password);
 console.log(clientId);
