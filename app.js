@@ -3,7 +3,7 @@ let password;
 let clientId;
 let clientSecret;
 
-require('yargs').parse()
+require('yargs')
   .command({
     command: 'username <USER>',
     aliases: ['user', 'usr', 'u'],
