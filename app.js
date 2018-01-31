@@ -1,21 +1,42 @@
+let username;
+let password;
+let clientId;
+let clientSecret;
+
 require('yargs').parse()
-  .command('credentials <USER> <PASS> <CLIENT_ID> <CLIENT_SECRET>', 'Enter your Reddit bot credentials', (argsv) => {
-    yargs.positional('USER', {
-    describe: 'Reddit username',
-    type: 'string',
-    default: 'Spaceface16518'
-  }).positional('PASS', {
-    describe: 'Reddit password',
-    tyoe: 'string',
-    default: ''
-  }).positional('CLIENT_ID', {
-      describe: 'Reddit app client ID',
-      type: 'string',
-      default: ''
-}).postional('CLIENT_SECRET', {
-      describe: 'Reddit app client secret key',
-      type: 'strin',
-      default: ''
-  }
+  .command({
+    command: 'username <USER>',
+    aliases: ['user', 'usr', 'u'],
+    desc: 'Enter Reddit username',
+    handler: (argv) => {
+      username = argv;
+    }
+  }).command({
+    command: 'password <PASS>',
+    aliases: ['pass', 'p'],
+    desc: 'Enter Reddit password',
+    handler: (argv) => {
+      password = argv;
+    }
+  }).command({
+    command: 'client_id <CLIENT_ID>',
+    aliases: ['ci', 'id', 'i'],
+    desc: 'Enter your Reddit app client ID',
+    handler: (argv) => {
+      clientId = argv;
+    }
+  }).command({
+    command: 'client_secret <CLIENT_SECRET>',
+    aliases: ['cs', 'secret', 's'],
+    desc: 'Enter your Reddit app client secret key',
+    handler: (argv) => {
+      clientSecret = argv;
+    }
+  })
   .help()
   .argv
+
+console.log(username);
+console.log(password);
+console.log(clientId);
+console.log(clientSecret);
