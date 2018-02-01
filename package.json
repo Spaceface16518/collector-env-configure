@@ -4,7 +4,9 @@
   "description": "A cli argument collector for Halo Strat Roulette's Reddit Bot",
   "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "npm run compile; node app.js",
+    "compile": "echo 'Building...' && tsc app.ts",
+    "test": "npm start 'test successful'"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/Spaceface16518/collector-env-configure#readme",
   "dependencies": {
+    "typescript": "^2.7.1",
     "yargs": "^11.0.0"
   }
 }
